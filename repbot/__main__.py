@@ -81,6 +81,11 @@ def createRepo():
 
         if answers['open'] == 'Yes':
             # open
+            # navigate to folder
+            # open with code .
+
+            os.chdir(directory)
+            os.system('code .')
         else:
             main()
 
