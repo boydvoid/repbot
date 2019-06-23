@@ -5,28 +5,28 @@ import os
 import platform
 
 
-def create(title, private, u):
+def create(title, private, u, directory):
 
     if private == 'Yes':
         repo = u.create_repo(title, private=True)
         print('%s was created.' % title)
 
         if os.name == 'posix':
-            os.chdir('mnt/c/Users/Bobby/Documents/Github')
+            os.chdir(directory)
             os.system("git clone https://github.com/robaboyd/%s.git" %
                       (title))
         else:
-            os.chdir('C:/Users/Bobby/Documents/Github')
+            os.chdir(directory)
             os.system("git clone https://github.com/robaboyd/%s.git" %
                       (title))
     else:
         repo = u.create_repo(title, private=False)
         print('%s was created.' % title)
         if os.name == 'posix':
-            os.chdir('mnt/c/Users/Bobby/Documents/Github')
+            os.chdir(directory)
             os.system("git clone https://github.com/robaboyd/%s.git" %
                       (title))
         else:
-            os.chdir('C:/Users/Bobby/Documents/Github')
+            os.chdir(directory)
             os.system("git clone https://github.com/robaboyd/%s.git" %
                       (title))
