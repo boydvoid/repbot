@@ -28,9 +28,12 @@ def main():
 
     print(answers)
 
-    # need to run menu
-
-
+    if answers['menu'] == 'Create a new repo':
+        createRepo()
+    elif answers['menu'] == 'Change my settings':
+        setup(name, password, directory)
+    else:
+        exit()
 
 
 def createRepo() :
@@ -63,6 +66,7 @@ def createRepo() :
         u = g.get_user()
 
         create(title, private, u, directory)
+        main()
 
     else:
         questions = [
