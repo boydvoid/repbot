@@ -83,7 +83,7 @@ def createRepo():
             # open
             # navigate to folder
             # open with code .
-
+            print('Open')
             os.chdir(directory)
             os.system('code .')
         else:
