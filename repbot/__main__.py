@@ -3,12 +3,16 @@ from __future__ import print_function, unicode_literals
 from .create import create
 from .settings import setup
 from os import path
+from pyfiglet import Figlet
 import sys
 from PyInquirer import prompt, print_json
 from github import Github
 import os
 import platform
 import json
+
+f = Figlet(font="slant")
+print(f.renderText('RepBot'))
 
 
 def main():
@@ -79,11 +83,11 @@ def createRepo():
 
         answers = prompt(questions)
         print('Answers: %s' % answers['open'])
-        if answers['open'] == 'True':
+        if answers['open'] == True:
             # open
             # navigate to folder
             # open with code .
-            print('Open')
+            print('Openening')
             os.chdir(directory)
             os.system('code .')
         else:
