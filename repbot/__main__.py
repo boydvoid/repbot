@@ -78,8 +78,8 @@ def createRepo():
         ]
 
         answers = prompt(questions)
-
-        if answers['open'] == 'Yes':
+        print('Answers: %s' % answers['open'])
+        if answers['open'] == 'True':
             # open
             # navigate to folder
             # open with code .

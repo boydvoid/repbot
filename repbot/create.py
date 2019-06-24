@@ -7,7 +7,7 @@ import platform
 
 def create(title, private, u, directory):
 
-    if private == 'Yes':
+    if private == 'True':
         repo = u.create_repo(title, private=True)
         print('%s was created.' % title)
 
